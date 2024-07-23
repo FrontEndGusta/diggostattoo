@@ -115,7 +115,7 @@ export default function Tatuagens() {
           style={{ height: "auto" }} // Ajusta a altura conforme necessário
           className="mx-auto flex flex-col items-center justify-center gap-4 px-5 pt-20"
         >
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
+          <div className="flex flex-wrap lg:flex-nowrap justify-center gap-4 mb-4">
             {cardsData.map((card, index) => (
               <Card
                 key={index}
@@ -142,7 +142,7 @@ export default function Tatuagens() {
                   <div className="relative">
                     <h2 className="scroll-m-20 text-2xl sm:text-3xl font-semibold">
                       {item.title}{" "}
-                      <span className="absolute text-[#facc15] text-[20px] sm:text-[24px] bottom-[-12px]">
+                      <span className="absolute text-[#facc15] text-[20px] sm:text-[24px] bottom-[10px]">
                         {item.sup}
                       </span>
                     </h2>
