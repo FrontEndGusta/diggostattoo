@@ -2,12 +2,13 @@
 import React from "react";
 import Image from "next/image";
 
-
 export default function WhatsappFixed() {
- 
-
   const handleClick = () => {
-    window.open("https://wa.me/11996952488/?teste=urlencodedtext", "_blank");
+    const phoneNumber = "5511999638488"; // Inclua o código do país 55 para o Brasil
+    const message = encodeURIComponent("Olá, gostaria de saber mais sobre seus serviços.");
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(url, "_blank");
   };
 
   return (
