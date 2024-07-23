@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/header/Header";
+import WhatsappFixed from "@/components/whatsappFixed/whatsappFixed";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
+          <WhatsappFixed />
           {children}
         </ThemeProvider>
        </body>
