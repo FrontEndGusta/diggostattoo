@@ -1,17 +1,17 @@
 "use client";
 
 import * as React from "react";
-import { HamburgerMenuIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 export function ModeToggleMobile() {
-  const { setTheme } = useTheme();
+  const menu: string[] = ["Inicio", "Tatuagens", "Orçamentos"];
 
   return (
     <DropdownMenu>
@@ -19,19 +19,10 @@ export function ModeToggleMobile() {
         <HamburgerMenuIcon />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <span className="flex gap-1 items-center">
-            <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90" />
-            Modo Claro
-          </span>
-        </DropdownMenuItem>
-
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <span className="flex gap-1 items-center">
-            <MoonIcon className="h-[1.2rem] w-[1.2rem] transition-all dark:rotate-0 dark:scale-100" />
-            Modo Escuro
-          </span>
-        </DropdownMenuItem>
+        <DropdownMenuLabel>Menu</DropdownMenuLabel>
+        {menu.map((item, index) => (
+          <DropdownMenuItem key={index}>{item}</DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
