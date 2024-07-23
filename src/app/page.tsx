@@ -24,7 +24,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center w-full mb-4">
+          <div className="flex justify-center w-full mb-10">
             <span>
               <svg
                 className="animate-bounce"
