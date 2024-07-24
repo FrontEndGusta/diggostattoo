@@ -119,7 +119,7 @@ export default function Tatuagens() {
             {cardsData.map((card, index) => (
               <Card
                 key={index}
-                className="w-[280px] h-[300px] flex justify-center flex-col p-[40px] m-4"
+                className="w-[330px] h-[300px] flex justify-center flex-col p-[40px] "
               >
                 <div className="flex justify-start">{card.icon}</div>
                 <h2 className="scroll-m-20 pb-2 text-3xl mt-1 font-semibold first:mt-0">
@@ -131,7 +131,7 @@ export default function Tatuagens() {
           </div>
 
           <div className="flex justify-center w-full mb-4">
-          <Card className=" flex w-full min-w-[280px] mx-auto min-h-[200px] flex-wrap gap-4 justify-evenly items-center p-6 m-4">
+          <Card className=" flex w-full min-w-[280px] mx-auto min-h-[200px] flex-wrap gap-4 justify-evenly items-center p-6">
 
               {recognition.map((item, index) => (
                 <div
