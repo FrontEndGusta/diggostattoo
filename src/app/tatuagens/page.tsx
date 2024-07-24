@@ -131,12 +131,12 @@ export default function Tatuagens() {
           </div>
 
           <div className="flex justify-center w-full mb-4">
-          <Card className="w-full min-w-[280px] mx-auto min-h-[200px] flex flex-col gap-4 justify-center items-center p-6 m-4 lg:flex-row lg:flex-nowrap">
+          <Card className=" flex w-full min-w-[280px] mx-auto min-h-[200px] flex-wrap gap-4 justify-evenly items-center p-6 m-4">
 
               {recognition.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col justify-center items-center gap-3 sm:w-1/2 lg:w-1/3 xl:w-1/4"
+                  className="flex flex-col justify-center items-center gap-2"
                 >
                   {item.icon}
                   <div className="relative">
