@@ -1,7 +1,7 @@
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { testimonials } from "@/data";
 
-export const Clients = () => {
+export default function Clientes() {
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
