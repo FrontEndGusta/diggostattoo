@@ -128,7 +128,7 @@ export default function Tatuagens() {
             {cardsData.map((card, index) => (
               <Card
                 key={index}
-                className="w-[330px] h-[250px] flex justify-center flex-col p-[40px] "
+                className="w-[300px] h-[250px] flex justify-center flex-col p-[40px] "
               >
                 <div className="flex justify-start">{card.icon}</div>
                 <h2 className="scroll-m-20 tracking-[.1em] pb-2 text-3xl mt-1 font-semibold first:mt-0">
