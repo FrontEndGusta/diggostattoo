@@ -110,10 +110,10 @@ export default function Tatuagens() {
 
   return (
     <main className="flex-1">
-      <div className="container relative">
+      <div className="w-full relative">
         <section
           style={{ height: "auto" }} // Ajusta a altura conforme necessário
-          className="mx-auto flex flex-col items-center justify-center gap-6 px-5 pb-[80px]"
+          className="w- full mx-auto flex flex-col items-center justify-center gap-6 px-0 pb-[80px]"
         >
           <div className="flex items-center gap-2 pb-5">
             <Image
@@ -122,7 +122,7 @@ export default function Tatuagens() {
               width={50}
               height={50}
             />
-            <h1 className="text-3xl font-bold tracking-[.1em] py-[80px]">NOSSO DIFERENCIAL</h1>
+            <h1 className="w-full text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">NOSSO DIFERENCIAL</h1>
           </div>
           <div className="flex flex-wrap lg:flex-nowrap justify-center gap-4 mb-10">
             {cardsData.map((card, index) => (
@@ -131,7 +131,7 @@ export default function Tatuagens() {
                 className="w-[300px] h-[250px] flex justify-center flex-col p-[40px] "
               >
                 <div className="flex justify-start">{card.icon}</div>
-                <h2 className="scroll-m-20 tracking-[.1em] pb-2 text-3xl mt-1 font-semibold first:mt-0">
+                <h2 className="scroll-m-20 tracking-[.1em] pb-2 text-[24px] md:text-3xl mt-1 font-semibold first:mt-0">
                   {card.title}
                 </h2>
                 <CardDescription>{card.description}</CardDescription>
@@ -148,7 +148,7 @@ export default function Tatuagens() {
                 >
                   {item.icon}
                   <div className="relative">
-                    <h2 className="scroll-m-20 text-2xl sm:text-3xl font-semibold">
+                    <h2 className="scroll-m-20 text-[24px] md:text-3xl font-semibold">
                       {item.title}{" "}
                       <span className="absolute text-[#facc15] text-[20px] sm:text-[24px] bottom-[10px]">
                         {item.sup}

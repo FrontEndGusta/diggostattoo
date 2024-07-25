@@ -92,7 +92,7 @@ export default function Estilos() {
           width={50}
           height={50}
         />
-        <h1 className="text-3xl font-bold tracking-[.1em] py-[80px]">
+        <h1 className="text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">
           NOSSOS ESTILOS
         </h1>
       </div>
@@ -103,7 +103,7 @@ export default function Estilos() {
             className="flex flex-col gap-5 pb-20 w-full sm:w-[50%] items-start text-left sm:odd:items-start sm:odd:text-left sm:even:items-end sm:even:text-right"
           >
             {item.icon}
-            <h2 className="text-3xl font-semibold tracking-[.1em]">
+            <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
               {item.title}
             </h2>
             <p className="text-muted-foreground w-full w-[100%] md:w-[50%] lg:w-[60%]">

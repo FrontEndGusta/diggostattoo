@@ -13,7 +13,7 @@ export default function Clientes() {
               height={50}
               className="mb-4"
             />
-            <h1 className="text-3xl font-bold tracking-[.1em]">FEEDBACKS DOS CLIENTES</h1>
+            <h1 className="text-[24px] md:text-3xl font-bold tracking-[.1em]">NOSSOS FEEDBACKS</h1>
           </div>
 
       <div className="flex flex-col items-center max-lg:mt-10">
