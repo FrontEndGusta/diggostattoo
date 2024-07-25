@@ -139,7 +139,7 @@ export default function Tatuagens() {
             ))}
           </div>
 
-          <div className="flex justify-center w-full mb-4">
+          <div className="flex justify-center w-full mb-4 px-5">
             <Card className=" flex w-full min-w-[330px] lg:justify-evenly mx-auto min-h-[200px] flex-wrap gap-4 justify-between items-center p-6">
               {recognition.map((item, index) => (
                 <div

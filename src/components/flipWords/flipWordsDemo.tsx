@@ -7,7 +7,7 @@ export function FlipWordsDemo() {
   return (
     <div className="w-full">
       <h1 className="text-3xl font-bold tracking-[.1em]">
-        Tatuagem que combina com<FlipWords words={words} />
+        <p>Tatuagem que combina com</p><FlipWords words={words} />
       </h1>
     </div>
   );
