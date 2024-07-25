@@ -1,7 +1,7 @@
 import { Card, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 
-export default function Tatuagens() {
+export default function Diferencial() {
   const cardsData = [
     {
       title: "Melhores Tattoos",
