@@ -1,10 +1,6 @@
 import { FlipWordsDemo } from "@/components/flipWords/flipWordsDemo";
-import Header from "@/components/header/Header";
-import { ImagesSliderDemo } from "@/components/imagesSlider/imagesSliderDemo";
-import { ModeToggle } from "@/components/modeToggle/ModeToggle";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
 
 export default function Inicio() {
   return (
@@ -14,22 +10,29 @@ export default function Inicio() {
           style={{ height: "calc(100vh - 60px)" }}
           className="mx-auto flex flex-col items-start gap-4 " // Adiciona padding-top para evitar sobreposição
         >
-          <div className="flex-1 flex-wrap md:flex-nowrap w-full flex items-center justify-between">
-            <div className="flex gap-3 flex-col">
+          <div className="flex-1 w-full flex-wrap md:flex-nowrap w-full flex items-center justify-between">
+            <div className="flex justify-center w-full md:w-[70%] items-center text-center md:text-left items-left gap-3 flex-col">
               <FlipWordsDemo />
-              <p className="max-w-2xl text-lg font-light text-foreground tracking-[1.5px]">
+              <p className="w-full text-lg font-light text-foreground tracking-[1.5px] text-center md:text-left">
                 Experimente fazer um orçamento
               </p>
-              <div>
+              <div className="w-full">
                 <Button>Fazer orçamento</Button>
               </div>
             </div>
-            <div>
-            {/* <ImagesSliderDemo /> */}
-            <Image src='/images/sectionOne/lobo.png'className="dark:invert" alt="lobo" width={400} height={400}/>
+            <div className="w-full md:w-[30%] flex justify-center">
+              {/* <ImagesSliderDemo /> */}
+              <Image
+                src="/images/sectionOne/lobo.png"
+                alt="lobo"
+                width={200}
+                height={200}
+                objectFit="contain"
+                className="dark:invert md:w-[300px] md:h-[300px]"
+              />
+            </div>
           </div>
-          </div>
-          
+
           <div className="flex justify-center w-full mb-10">
             <span>
               <svg
