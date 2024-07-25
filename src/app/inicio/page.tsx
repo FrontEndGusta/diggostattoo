@@ -17,7 +17,7 @@ export default function Inicio() {
           <div className="flex-1 flex-wrap md:flex-nowrap w-full flex items-center justify-between">
             <div className="flex gap-3 flex-col">
               <FlipWordsDemo />
-              <p className="max-w-2xl text-lg font-light text-foreground">
+              <p className="max-w-2xl text-lg font-light text-foreground tracking-[1.5px]">
                 Experimente fazer um orçamento
               </p>
               <div>

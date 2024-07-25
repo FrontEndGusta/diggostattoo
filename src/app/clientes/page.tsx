@@ -1,13 +1,20 @@
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { testimonials } from "@/data";
+import Image from "next/image";
 
 export default function Clientes() {
   return (
-    <section id="testimonials" className="py-20">
-      <h1 className="heading">
-        Clientes
-        <span className="text-purple">Clientes satisfeitos</span>
-      </h1>
+    <section id="testimonials" className="w-full py-20 flex flex-col mx-auto">
+       <div className="w-full flex items-center justify-center gap-4 pb-5 px-5">
+            <Image
+              src="/icons/sectionFor/client.svg"
+              alt="client"
+              width={50}
+              height={50}
+              className="mb-4"
+            />
+            <h1 className="text-3xl font-bold tracking-[.1em]">FEEDBACKS DOS CLIENTES</h1>
+          </div>
 
       <div className="flex flex-col items-center max-lg:mt-10">
         <div

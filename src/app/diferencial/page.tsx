@@ -113,16 +113,25 @@ export default function Tatuagens() {
       <div className="container relative">
         <section
           style={{ height: "auto" }} // Ajusta a altura conforme necessário
-          className="mx-auto flex flex-col items-center justify-center gap-4 px-5 pt-20"
+          className="mx-auto flex flex-col items-center justify-center gap-6 px-5 pb-[80px]"
         >
-          <div className="flex flex-wrap lg:flex-nowrap justify-center gap-4 mb-4">
+          <div className="flex items-center gap-2 pb-5">
+            <Image
+              src="/icons/sectionThree/star.svg"
+              alt="star"
+              width={50}
+              height={50}
+            />
+            <h1 className="text-3xl font-bold tracking-[.1em] py-[80px]">NOSSO DIFERENCIAL</h1>
+          </div>
+          <div className="flex flex-wrap lg:flex-nowrap justify-center gap-4 mb-10">
             {cardsData.map((card, index) => (
               <Card
                 key={index}
                 className="w-[330px] h-[250px] flex justify-center flex-col p-[40px] "
               >
                 <div className="flex justify-start">{card.icon}</div>
-                <h2 className="scroll-m-20 pb-2 text-3xl mt-1 font-semibold first:mt-0">
+                <h2 className="scroll-m-20 tracking-[.1em] pb-2 text-3xl mt-1 font-semibold first:mt-0">
                   {card.title}
                 </h2>
                 <CardDescription>{card.description}</CardDescription>
@@ -131,8 +140,7 @@ export default function Tatuagens() {
           </div>
 
           <div className="flex justify-center w-full mb-4">
-          <Card className=" flex w-full min-w-[330px] lg:justify-evenly mx-auto min-h-[200px] flex-wrap gap-4 justify-between items-center p-6">
-
+            <Card className=" flex w-full min-w-[330px] lg:justify-evenly mx-auto min-h-[200px] flex-wrap gap-4 justify-between items-center p-6">
               {recognition.map((item, index) => (
                 <div
                   key={index}
