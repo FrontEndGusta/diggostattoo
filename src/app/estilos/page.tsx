@@ -1,6 +1,7 @@
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { testimonials } from "@/data";
 import Image from "next/image";
+import image1 from "@/assets/teste.png";
 
 export default function Estilos() {
   const cardsData = [
@@ -43,6 +44,9 @@ export default function Estilos() {
       description:
         "Especialista em tatuagens finas e sutis, com traços delicados e minimalistas.",
     },
+  ];
+
+  const cardsData2 = [
     {
       icon: (
         <Image
@@ -83,6 +87,7 @@ export default function Estilos() {
         "Especialista em tatuagens de cultura geek, incluindo personagens de anime, jogos e filmes.",
     },
   ];
+
   return (
     <>
       <div className="flex items-center justify-center gap-2 pb-5">
@@ -96,21 +101,42 @@ export default function Estilos() {
           NOSSOS ESTILOS
         </h1>
       </div>
-      <section className="flex flex-wrap px-25 w-full px-[2rem] md:px-[7rem]">
-        {cardsData.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col gap-5 pb-20 w-full sm:w-[50%] items-start text-left sm:odd:items-start sm:odd:text-left sm:even:items-end sm:even:text-right"
-          >
-            {item.icon}
-            <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
-              {item.title}
-            </h2>
-            <p className="text-muted-foreground w-full w-[100%] md:w-[50%] lg:w-[60%]">
-              {item.description}
-            </p>
-          </div>
-        ))}
+      <section className="flex w-full">
+        <div className="w-[30%] flex flex-col items-center gap-8">
+          {cardsData.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-5 pb-20 w-full items-start text-left pl-20"
+            >
+              {item.icon}
+              <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
+                {item.title}
+              </h2>
+              <p className="text-muted-foreground w-full md:w-[50%] lg:w-[60%]">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="w-[40%] hidden lg:flex h-[100%] items-center justify-center py-8">
+          <Image src={image1} alt="teste" objectFit="contain" />
+        </div>
+        <div className="w-[30%] flex flex-col items-end gap-8">
+          {cardsData2.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-5 pb-20 w-full items-end text-right pr-20 "
+            >
+              {item.icon}
+              <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
+                {item.title}
+              </h2>
+              <p className="text-muted-foreground w-full md:w-[50%] lg:w-[60%]">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
