@@ -6,9 +6,9 @@ import Image from "next/image";
 export default function Inicio() {
   return (
     <main className="flex-1">
-      <div className="container relative p-0">
+      <div className="w-full p-0 md:container">
         <section
-          style={{ height: "calc(100vh - 60px)" }}
+          style={{ height: "calc(100vh - 100px)" }}
           className="mx-auto flex flex-col items-start gap-4 " // Adiciona padding-top para evitar sobreposição
         >
           <div className="flex-1 w-full flex-wrap md:flex-nowrap w-full flex items-center justify-between">
