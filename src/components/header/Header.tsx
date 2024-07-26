@@ -26,9 +26,15 @@ export default function Header() {
 
       <div className="flex md:hidden justify-between w-full">
         <div className="flex">
-          <ModeToggleMobile />
+         
+            <Avatar>
+              <AvatarImage src="/logo/logo.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+        
         </div>
-        <div>
+        <div className="flex gap-4 items-center">
+          <ModeToggleMobile />
           <ModeToggle />
         </div>
       </div>

@@ -9,7 +9,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function MenuNavigation() {
-  const menu: string[] = ["Inicio", "Tatuagens", "Orçamentos"];
+  const menu: string[] = ["Inicio", "Estilos", "Tatuagens", 'Diferencial', 'Clientes'];
   return (
     <NavigationMenu>
       {menu.map((item, index) => (

@@ -1,3 +1,4 @@
+import { CarouselDApiDemo } from "@/components/carrousel/carrousel";
 import { FlipWordsDemo } from "@/components/flipWords/flipWordsDemo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -5,13 +6,13 @@ import Image from "next/image";
 export default function Inicio() {
   return (
     <main className="flex-1">
-      <div className="container relative">
+      <div className="container relative p-0">
         <section
           style={{ height: "calc(100vh - 60px)" }}
           className="mx-auto flex flex-col items-start gap-4 " // Adiciona padding-top para evitar sobreposição
         >
           <div className="flex-1 w-full flex-wrap md:flex-nowrap w-full flex items-center justify-between">
-            <div className="flex justify-center w-full md:w-[70%] items-center text-center md:text-left items-left gap-3 flex-col">
+            <div className="flex justify-center w-full md:w-[50%] items-center text-center md:text-left items-left gap-3 flex-col">
               <FlipWordsDemo />
               <p className="w-full text-lg font-light text-foreground tracking-[1.5px] text-center md:text-left">
                 Experimente fazer um orçamento
@@ -20,16 +21,8 @@ export default function Inicio() {
                 <Button>Fazer orçamento</Button>
               </div>
             </div>
-            <div className="w-full md:w-[30%] flex justify-center">
-              {/* <ImagesSliderDemo /> */}
-              <Image
-                src="/images/sectionOne/lobo.png"
-                alt="lobo"
-                width={200}
-                height={200}
-                objectFit="contain"
-                className="dark:invert md:w-[300px] md:h-[300px]"
-              />
+            <div className="w-full md:w-[40%] flex items-center justify-center">
+              <CarouselDApiDemo />
             </div>
           </div>
 

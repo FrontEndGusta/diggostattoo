@@ -26,7 +26,7 @@ export function ThreeDCardDemo() {
               src={src}
               height="1000"
               width="1000"
-              className="h-60 w-full  object-cover group-hover/card:shadow-xl"
+              className="h-60 w-full object-cover group-hover/card:shadow-xl"
               alt={`thumbnail-${index}`}
             />
           </CardItem>
