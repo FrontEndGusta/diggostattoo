@@ -52,7 +52,7 @@ export function CarouselDApiDemo() {
         <CarouselContent className="w-full h-full">
           {imageUrls.map((url, index) => (
             <CarouselItem key={index} className="w-full h-full">
-              <Card className="w-full h-full">
+              <Card className="w-full h-full border-none">
                 <CardContent className="relative w-full h-full">
                   <Image style={{filter: 'brightness(60%)'}} src={url.url} alt='' layout="fill" objectFit="cover" />
                 </CardContent>
