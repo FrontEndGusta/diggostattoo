@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Inicio() {
   return (
     <main className="flex-1 relative">
-      <div className="w-full p-0 md:container">
+      <div className="w-full p-0 md:w-full">
         <section
           style={{ height: "calc(100vh - 100px)" }}
           className="relative mx-auto flex flex-col items-start gap-4"
@@ -15,7 +15,7 @@ export default function Inicio() {
             <CarouselDApiDemo />
           </div>
           <div className="relative z-10 flex-1 w-full flex-wrap md:flex-nowrap flex items-center justify-between">
-            <div className="flex justify-center w-full md:w-[50%] items-center text-center md:text-left items-left gap-3 flex-col">
+          <div className="flex justify-center w-full px-0 md:w-[50%] lg:px-40 items-center text-center md:text-left items-left gap-3 flex-col">
               <FlipWordsDemo />
               <div className="w-full">
                 <Button>Fazer orçamento</Button>
