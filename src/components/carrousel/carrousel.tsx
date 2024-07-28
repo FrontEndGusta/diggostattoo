@@ -54,7 +54,7 @@ export function CarouselDApiDemo() {
             <CarouselItem key={index} className="w-full h-full">
               <Card className="w-full h-full">
                 <CardContent className="relative w-full h-full">
-                  <Image src={url.url} alt='' layout="fill" objectFit="cover" />
+                  <Image style={{filter: 'brightness(60%)'}} src={url.url} alt='' layout="fill" objectFit="cover" />
                 </CardContent>
               </Card>
             </CarouselItem>
