@@ -5,28 +5,24 @@ import Image from "next/image";
 
 export default function Inicio() {
   return (
-    <main className="flex-1">
+    <main className="flex-1 relative">
       <div className="w-full p-0 md:container">
         <section
           style={{ height: "calc(100vh - 100px)" }}
-          className="mx-auto flex flex-col items-start gap-4 " // Adiciona padding-top para evitar sobreposição
+          className="relative mx-auto flex flex-col items-start gap-4"
         >
-          <div className="flex-1 w-full flex-wrap md:flex-nowrap w-full flex items-center justify-between">
+          <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+            <CarouselDApiDemo />
+          </div>
+          <div className="relative z-10 flex-1 w-full flex-wrap md:flex-nowrap flex items-center justify-between">
             <div className="flex justify-center w-full md:w-[50%] items-center text-center md:text-left items-left gap-3 flex-col">
               <FlipWordsDemo />
-              <p className="w-full text-lg font-light text-foreground tracking-[1.5px] text-center md:text-left">
-                Experimente fazer um orçamento
-              </p>
               <div className="w-full">
                 <Button>Fazer orçamento</Button>
               </div>
             </div>
-            <div className="w-full md:w-[40%] flex items-center justify-center">
-              <CarouselDApiDemo />
-            </div>
           </div>
-
-          <div className="flex justify-center w-full mb-10">
+          <div className="relative z-10 flex justify-center w-full mb-10">
             <span>
               <svg
                 className="animate-bounce"
