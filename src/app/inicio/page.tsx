@@ -8,7 +8,7 @@ export default function Inicio() {
     <main className="flex-1 relative">
       <div className="w-full p-0 md:w-full">
         <section
-          style={{ height: "calc(100vh - 100px)" }}
+          style={{ height: "calc(100vh - 60px)" }}
           className="relative mx-auto flex flex-col items-start gap-4"
         >
           <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
