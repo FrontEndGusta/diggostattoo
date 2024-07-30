@@ -4,11 +4,11 @@ import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
 import React, { forwardRef } from "react";
 
-export default function Estilos({
-  estilosRef,
-}: {
-  estilosRef: any
-}) {
+type EstiloProps = {
+  estilosRef: React.RefObject<HTMLDivElement>;
+}
+
+const Estilos: React.FC<EstiloProps> = ({ estilosRef }) => {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
@@ -96,10 +96,7 @@ export default function Estilos({
 
   return (
     <>
-      <div
-        ref={estilosRef}
-        className="flex items-center justify-center gap-2 pb-5"
-      >
+      <div ref={estilosRef} className="flex items-center justify-center gap-2 pb-5">
         <Image
           src="/icons/sectionTwo/style.svg"
           alt="star"
@@ -111,7 +108,7 @@ export default function Estilos({
         </h1>
       </div>
       <section className="flex flex-col items-center lg:justify-between lg:flex-row w-full overflow-hidden">
-        <div className=" w-full flex flex-col items-center lg:w-[30%] flex flex-col items-center gap-8">
+        <div className=" w-full flex flex-col items-center lg:w-[30%] gap-8">
           {cardsData.map((item, index) => (
             <div
               key={index}
@@ -145,7 +142,7 @@ export default function Estilos({
               data-aos-delay="300"
               className="w-full"
             >
-              <div className="flex flex-col px-20 items-start w-full gap-5 pb-20 w-full lg:items-end lg:text-right lg:pr-20">
+              <div className="flex flex-col px-20 items-start w-full gap-5 pb-20 lg:items-end lg:text-right lg:pr-20">
                 {item.icon}
                 <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
                   {item.title}
@@ -161,3 +158,5 @@ export default function Estilos({
     </>
   );
 }
+
+export default Estilos;
