@@ -1,9 +1,10 @@
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { testimonials } from "@/data";
+"use client";
 import Image from "next/image";
 import image1 from "@/assets/teste.png";
+import useAosAnimation from "@/components/hooks/useWindowWidth";
 
 export default function Estilos() {
+  const aosAnimation = useAosAnimation();
   const cardsData = [
     {
       icon: (
@@ -101,39 +102,50 @@ export default function Estilos() {
           NOSSOS ESTILOS
         </h1>
       </div>
-      <section className="flex w-full">
-        <div className="w-[30%] flex flex-col items-center gap-8">
+      <section className="flex flex-col items-center lg:justify-between lg:flex-row w-full overflow-hidden">
+        <div className=" w-full flex flex-col items-center lg:w-[30%] flex flex-col items-center gap-8">
           {cardsData.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-5 pb-20 w-full items-start text-left pl-20"
+              data-aos="fade-right"
+              data-aos-delay="300"
+              className="w-full"
             >
-              {item.icon}
-              <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
-                {item.title}
-              </h2>
-              <p className="text-muted-foreground w-full md:w-[50%] lg:w-[60%]">
-                {item.description}
-              </p>
+              <div className="flex flex-col gap-5 pb-20 w-full items-start text-left pl-20">
+                {item.icon}
+                <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
+                  {item.title}
+                </h2>
+                <p className="text-muted-foreground w-full md:w-[50%] lg:w-[60%]">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+
         <div className="w-[40%] hidden lg:flex h-[100%] items-center justify-center py-8">
-          <Image src={image1} alt="teste" objectFit="contain" />
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <Image src={image1} alt="teste" objectFit="contain" />
+          </div>
         </div>
-        <div className="w-[30%] flex flex-col items-end gap-8">
+        <div className=" w-full flex flex-col items-center lg:w-[30%] lg:items-end gap-8">
           {cardsData2.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-5 pb-20 w-full items-end text-right pr-20 "
+              data-aos={aosAnimation}
+              data-aos-delay="300"
+              className="w-full"
             >
-              {item.icon}
-              <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
-                {item.title}
-              </h2>
-              <p className="text-muted-foreground w-full md:w-[50%] lg:w-[60%]">
-                {item.description}
-              </p>
+              <div className="flex flex-col px-20 items-start w-full gap-5 pb-20 w-full lg:items-end lg:text-right lg:pr-20">
+                {item.icon}
+                <h2 className="text-[24px] md:text-3xl font-semibold tracking-[.1em]">
+                  {item.title}
+                </h2>
+                <p className="text-muted-foreground w-full md:w-[50%] lg:w-[60%]">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

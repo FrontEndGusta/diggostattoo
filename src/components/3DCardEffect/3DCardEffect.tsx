@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+import { CardContainer, CardItem } from "../ui/3d-card";
 
 // Gera URLs diferentes para cada imagem
 const imageUrls = [
@@ -17,20 +17,20 @@ const imageUrls = [
 export function ThreeDCardDemo() {
   return (
     <div className="flex flex-wrap justify-center gap-6">
-      {" "}
-      {/* Wrapper para disposição flexível */}
       {imageUrls.map((src, index) => (
-        <CardContainer key={index} className="inter-var">
-          <CardItem translateZ="100" className="w-full mt-4">
-            <Image
-              src={src}
-              height="1000"
-              width="1000"
-              className="h-60 w-full object-cover group-hover/card:shadow-xl"
-              alt={`thumbnail-${index}`}
-            />
-          </CardItem>
-        </CardContainer>
+        <div key={index} data-aos="zoom-out-up">
+          <CardContainer className="inter-var">
+            <CardItem translateZ="100" className="w-full mt-4">
+              <Image
+                src={src}
+                height="1000"
+                width="1000"
+                className="h-60 w-full object-cover group-hover/card:shadow-xl"
+                alt={`thumbnail-${index}`}
+              />
+            </CardItem>
+          </CardContainer>
+        </div>
       ))}
     </div>
   );

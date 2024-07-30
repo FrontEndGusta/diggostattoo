@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Header from "@/components/header/Header";
 import WhatsappFixed from "@/components/whatsappFixed/whatsappFixed";
+import AOSInitializer from "@/components/AOSInitializer/AOSInitializar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        {" "}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -29,9 +30,10 @@ export default function RootLayout({
         >
           <Header />
           <WhatsappFixed />
+          <AOSInitializer /> 
           {children}
         </ThemeProvider>
-       </body>
+      </body>
     </html>
   );
 }
