@@ -6,7 +6,7 @@ import { FlipWordsDemo } from "@/components/flipWords/flipWordsDemo";
 import { Button } from "@/components/ui/button";
 import { CardDescription } from "@/components/ui/card";
 
-interface InicioProps {
+type InicioProps = {
   refSession: React.RefObject<HTMLDivElement>;
 }
 
