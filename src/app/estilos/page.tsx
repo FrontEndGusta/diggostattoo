@@ -7,7 +7,7 @@ import React, { forwardRef } from "react";
 export default function Estilos({
   estilosRef,
 }: {
-  estilosRef: React.RefObject<HTMLDivElement>;
+  estilosRef: any
 }) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
