@@ -1,10 +1,22 @@
 "use client";
+import { useRef } from "react";
 import { CarouselDApiDemo } from "@/components/carrousel/carrousel";
 import FadeUp from "@/components/fadeUp/FadeUp";
 import { FlipWordsDemo } from "@/components/flipWords/flipWordsDemo";
 import { Button } from "@/components/ui/button";
+import { CardDescription } from "@/components/ui/card";
 
-export default function Inicio() {
+interface InicioProps {
+  refSession: React.RefObject<HTMLDivElement>;
+}
+
+export default function Inicio({ refSession }: InicioProps) {
+  const scrollToEstilos = () => {
+    if (refSession.current) {
+      refSession.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <FadeUp>
       <main className="flex-1 relative">
@@ -20,16 +32,19 @@ export default function Inicio() {
               <div className="flex justify-center w-full px-0 md:w-[50%] lg:px-40 items-center text-center md:text-left items-left gap-3 flex-col">
                 <FlipWordsDemo />
                 <div className="w-full">
+                  <p className="text-[16px] md:text-2xl text-muted-foreground pb-4">
+                    Consulte o melhor da sua arte
+                  </p>
                   <Button>Fazer orçamento</Button>
                 </div>
               </div>
             </div>
             <div className="relative z-10 flex justify-center w-full mb-10">
-              <span>
+              <span onClick={scrollToEstilos} style={{ cursor: "pointer" }}>
                 <svg
                   className="animate-bounce"
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                   viewBox="0 0 15 15"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
