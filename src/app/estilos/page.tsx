@@ -4,11 +4,11 @@ import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
 import React from "react";
 
-export interface EstilosProps {
+export interface Testslas {
   estilosRef: React.RefObject<HTMLDivElement>;
 }
 
-export default function Estilos({ estilosRef }: EstilosProps) {
+export default function Estilos({ estilosRef }: Testslas) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
