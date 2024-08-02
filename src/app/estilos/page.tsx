@@ -2,13 +2,13 @@
 import Image from "next/image";
 import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
-import React from "react";
+import React, { forwardRef } from "react";
 
-export interface Testslas {
+export type PropsEstilo = {
   estilosRef: React.RefObject<HTMLDivElement>;
-}
+};
 
-export default function Estilos({ estilosRef }: Testslas) {
+function Estilos({ estilosRef }: PropsEstilo) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
@@ -161,3 +161,5 @@ export default function Estilos({ estilosRef }: Testslas) {
     </>
   );
 }
+
+export default Estilos
