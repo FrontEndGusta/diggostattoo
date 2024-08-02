@@ -4,7 +4,7 @@ import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
 import React, { forwardRef } from "react";
 
-type propsEstilo = {
+export type propsEstilo = {
   estilosRef: React.RefObject<HTMLDivElement>;
 }
 
