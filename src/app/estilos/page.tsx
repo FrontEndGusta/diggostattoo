@@ -3,12 +3,9 @@ import Image from "next/image";
 import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
 import React, { forwardRef } from "react";
+import { EstilosProps } from "./estilos.types";
 
-export type PropsEstilo = {
-  estilosRef: React.RefObject<HTMLDivElement>;
-};
-
-function Estilos({ estilosRef }: PropsEstilo) {
+export default function Estilos({ estilosRef }: EstilosProps) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
@@ -161,5 +158,3 @@ function Estilos({ estilosRef }: PropsEstilo) {
     </>
   );
 }
-
-export default Estilos
