@@ -2,13 +2,13 @@
 import Image from "next/image";
 import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
-import React from "react";
+import React, { forwardRef } from "react";
 
-export type EstiloProps = {
+export type propsEstilo = {
   estilosRef: React.RefObject<HTMLDivElement>;
-}
+};
 
-const Estilos: React.FC<EstiloProps> = ({ estilosRef }) => {
+export default function Estilos({ estilosRef }: propsEstilo) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
@@ -96,7 +96,10 @@ const Estilos: React.FC<EstiloProps> = ({ estilosRef }) => {
 
   return (
     <>
-      <div ref={estilosRef} className="flex items-center justify-center gap-2 pb-5">
+      <div
+        ref={estilosRef}
+        className="flex items-center justify-center gap-2 pb-5"
+      >
         <Image
           src="/icons/sectionTwo/style.svg"
           alt="star"
@@ -158,5 +161,3 @@ const Estilos: React.FC<EstiloProps> = ({ estilosRef }) => {
     </>
   );
 }
-
-export default Estilos;
