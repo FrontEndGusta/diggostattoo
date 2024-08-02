@@ -2,13 +2,13 @@
 import Image from "next/image";
 import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
-import React, { forwardRef } from "react";
+import React from "react";
 
 export interface EstilosProps {
   estilosRef: React.RefObject<HTMLDivElement>;
-};
+}
 
-function Estilos({ estilosRef }: EstilosProps) {
+export default function Estilos({ estilosRef }: EstilosProps) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
@@ -161,5 +161,3 @@ function Estilos({ estilosRef }: EstilosProps) {
     </>
   );
 }
-
-export default Estilos
