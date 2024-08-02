@@ -8,7 +8,7 @@ export type PropsEstilo = {
   estilosRef: React.RefObject<HTMLDivElement>;
 };
 
-export default function Estilos({ estilosRef }: PropsEstilo) {
+function Estilos({ estilosRef }: PropsEstilo) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
@@ -161,3 +161,5 @@ export default function Estilos({ estilosRef }: PropsEstilo) {
     </>
   );
 }
+
+export default Estilos
