@@ -4,11 +4,11 @@ import image1 from "@/assets/teste.png";
 import useAosAnimation from "@/components/hooks/useWindowWidth";
 import React, { forwardRef } from "react";
 
-export type PropsEstilo = {
+export type EstilosProps = {
   estilosRef: React.RefObject<HTMLDivElement>;
 };
 
-function Estilos({ estilosRef }: PropsEstilo) {
+function Estilos({ estilosRef }: EstilosProps) {
   const aosAnimation = useAosAnimation();
   const cardsData = [
     {
