@@ -112,11 +112,18 @@ export default function Diferencial() {
   return (
     <main className="flex-1">
       <div className="w-full relative">
+        <div className="w-full flex items-center justify-center">
+        <h1 className="text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">
+          ESTILOS
+        </h1>
+        </div>
         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <section
             style={{ height: "auto", width: "90vw" }} // Ajusta a altura conforme necessário
             className="w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 px-0 pb-[80px] overflow-hidden"
           >
+            
+            
             <div className="w-full lg:w-[50%]">
               <HeroScrollDemo />
             </div>
@@ -128,13 +135,13 @@ export default function Diferencial() {
                     <div
                       className={`flex ${
                         index % 2 === 0
-                          ? "flex-col-reverse justify-center md:flex-row md:justify-start"
-                          : "flex-col justify-center md:flex-row md:justify-end"
+                          ? "flex-col-reverse items-center text-center justify-center md:flex-row md:justify-start md:items-start md:text-left"
+                          : "flex-col items-center text-center justify-center md:flex-row md:justify-end  md:items-start "
                       } w-full`}
                     >
                       {index % 2 === 0 && (
-                        <div className="flex w-full items-center  md:w-[50%] md:items-start  ">
-                          <div className="p-4">
+                        <div className="flex w-full md:w-[50%]  ">
+                          <div className="w-full p-4">
                             <CardDescription>
                               {card.description}
                             </CardDescription>
@@ -149,7 +156,7 @@ export default function Diferencial() {
                       </Card>
                       {index % 2 !== 0 && (
                         <div className="flex w-full items-center  md:w-[50%] md:items-start ">
-                          <div className="p-4">
+                          <div className="w-full p-4">
                             <CardDescription>
                               {card.description}
                             </CardDescription>

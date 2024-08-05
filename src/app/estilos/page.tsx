@@ -107,7 +107,7 @@ export default function Estilos({ estilosRef }: EstilosProps) {
           height={50}
         />
         <h1 className="text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">
-          NOSSOS ESTILOS
+          ESTILOS
         </h1>
       </div>
       <section className="flex flex-col items-center lg:justify-between lg:flex-row w-full overflow-hidden">

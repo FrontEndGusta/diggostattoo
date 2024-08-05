@@ -22,7 +22,7 @@ const imageUrls = [
 
 export function ThreeDCardDemo() {
   return (
-    <div className="flex flex-wrap justify-between gap-6">
+    <div className="flex justify-center flex-wrap md:justify-between gap-6">
       {imageUrls.map((src, index) => (
         <div key={index} data-aos="zoom-out-up">
           <CardContainer className="inter-var">

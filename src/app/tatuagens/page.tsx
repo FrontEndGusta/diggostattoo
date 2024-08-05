@@ -15,7 +15,7 @@ export default function Tatuagens() {
           className="mb-6"
         />
         <h1 className="text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">
-          NOSSOS TRABALHOS
+          TRABALHOS
         </h1>
       </div>
       <div className="w-full flex items-center justify-center gap-4 pb-5 px-5">
