@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Tatuagens() {
   return (
-    <section className="w-full py-20 flex flex-col mx-auto">
+    <section className="w-full py-20 flex flex-col mx-auto overflow-hidden">
       <div className="flex items-center justify-center gap-2 pb-5">
         <Image
           src="/icons/sectionThree/works.svg"

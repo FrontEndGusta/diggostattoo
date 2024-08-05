@@ -1,3 +1,4 @@
+import { HeroScrollDemo } from "@/components/HeroScroll/HeroScrollDemo";
 import { Card, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -113,55 +114,52 @@ export default function Diferencial() {
       <div className="w-full relative">
         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <section
-            style={{ height: "auto" }} // Ajusta a altura conforme necessário
-            className="w-full mx-auto flex flex-col items-center justify-center gap-6 px-0 pb-[80px]"
+            style={{ height: "auto", width: "90vw" }} // Ajusta a altura conforme necessário
+            className="w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 px-0 pb-[80px] overflow-hidden"
           >
-            <div className="flex items-center gap-2 pb-5">
-              <Image
-                src="/icons/sectionThree/star.svg"
-                alt="star"
-                width={50}
-                height={50}
-              />
-              <h1 className="w-full text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">
-                NOSSO DIFERENCIAL
-              </h1>
-            </div>
-            <div className="flex flex-wrap lg:flex-nowrap justify-center gap-4 mb-10">
-              {cardsData.map((card, index) => (
-                <Card
-                  key={index} // Adicione a prop `key` aqui
-                  className="w-[300px] h-[250px] flex justify-center flex-col p-[40px]"
-                >
-                  <div className="flex justify-start">{card.icon}</div>
-                  <h2 className="scroll-m-20 tracking-[.1em] pb-2 text-[24px] md:text-3xl mt-1 font-semibold first:mt-0">
-                    {card.title}
-                  </h2>
-                  <CardDescription>{card.description}</CardDescription>
-                </Card>
-              ))}
+            <div className="w-full lg:w-[50%]">
+              <HeroScrollDemo />
             </div>
 
-            <div className="flex justify-center w-full mb-4 px-5">
-              <div className="flex w-full min-w-[330px] lg:justify-evenly mx-auto min-h-[200px] flex-wrap gap-4 justify-between items-center p-6">
-                {recognition.map((item, index) => (
-                  <div
-                    key={index} // Adicione a prop `key` aqui
-                    className="flex flex-col justify-center items-center gap-2"
-                  >
-                    {item.icon}
-                    <div className="relative">
-                      <h2 className="scroll-m-20 text-[24px] md:text-3xl font-semibold">
-                        {item.title}{" "}
-                        <span className="absolute text-[#facc15] text-[20px] sm:text-[24px] bottom-[10px]">
-                          {item.sup}
-                        </span>
-                      </h2>
+            <div className="flex flex-col w-full lg:w-[50%] justify-center gap-4 mb-10">
+              {cardsData.map((card, index) => (
+                <>
+                  <div key={index} data-aos="fade-up-left" data-aos-delay="300">
+                    <div
+                      className={`flex ${
+                        index % 2 === 0
+                          ? "flex-col-reverse justify-center md:flex-row md:justify-start"
+                          : "flex-col justify-center md:flex-row md:justify-end"
+                      } w-full`}
+                    >
+                      {index % 2 === 0 && (
+                        <div className="flex w-full items-center  md:w-[50%] md:items-start  ">
+                          <div className="p-4">
+                            <CardDescription>
+                              {card.description}
+                            </CardDescription>
+                          </div>
+                        </div>
+                      )}
+                      <Card className="min-w-[300px] min-h-[250px] h-[200px] w-[50%] flex justify-center flex-col p-[40px]">
+                        <div className="flex justify-start">{card.icon}</div>
+                        <h2 className="scroll-m-20 tracking-[.1em] pb-2 text-[24px] md:text-3xl mt-1 font-semibold first:mt-0">
+                          {card.title}
+                        </h2>
+                      </Card>
+                      {index % 2 !== 0 && (
+                        <div className="flex w-full items-center  md:w-[50%] md:items-start ">
+                          <div className="p-4">
+                            <CardDescription>
+                              {card.description}
+                            </CardDescription>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                    <CardDescription>{item.description}</CardDescription>
                   </div>
-                ))}
-              </div>
+                </>
+              ))}
             </div>
           </section>
         </div>
