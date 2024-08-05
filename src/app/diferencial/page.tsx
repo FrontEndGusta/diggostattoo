@@ -112,7 +112,13 @@ export default function Diferencial() {
   return (
     <main className="flex-1">
       <div className="w-full relative">
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex items-center justify-center gap-3 pb-5">
+        <Image
+          src="/icons/sectionFor/diamond.svg"
+          alt="style"
+          width={45}
+          height={45}
+        />
         <h1 className="text-[24px] md:text-3xl font-bold tracking-[.1em] py-[80px]">
           ESTILOS
         </h1>
