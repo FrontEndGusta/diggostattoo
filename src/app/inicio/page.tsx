@@ -1,11 +1,9 @@
 "use client";
-import { useRef } from "react";
 import { CarouselDApiDemo } from "@/components/carrousel/carrousel";
 import FadeUp from "@/components/fadeUp/FadeUp";
 import { FlipWordsDemo } from "@/components/flipWords/flipWordsDemo";
 import { Button } from "@/components/ui/button";
-import { CardDescription } from "@/components/ui/card";
-
+import Link from "next/link";
 type InicioProps = {
   refSession: React.RefObject<HTMLDivElement>;
 }
@@ -25,10 +23,13 @@ export default function Inicio({ refSession }: InicioProps) {
             style={{ height: "calc(100vh - 60px)" }}
             className="relative mx-auto flex flex-col items-start gap-4"
           >
+            <Link href='tatuagens'>
             <div className="absolute inset-0 z-20 w-full h-full overflow-hidden">
               <CarouselDApiDemo />
             </div>
+            </Link>
             <div className="relative  flex-1 w-full flex-wrap md:flex-nowrap flex items-center justify-between">
+            
               <div className="flex justify-center z-30 w-full px-0 md:w-[50%] lg:px-40 items-center text-center md:text-left items-left gap-3 flex-col">
                 <FlipWordsDemo />
                 <div className="w-full">
@@ -38,6 +39,7 @@ export default function Inicio({ refSession }: InicioProps) {
                   <Button>Fazer orçamento</Button>
                 </div>
               </div>
+             
             </div>
             <div className="relative z-30 flex justify-center w-full mb-10">
               <span onClick={scrollToEstilos} style={{ cursor: "pointer" }}>
