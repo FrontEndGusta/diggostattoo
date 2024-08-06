@@ -12,7 +12,7 @@ export default function WhatsappFixed() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-20 overflow-hidden cursor-pointer" onClick={handleClick}>
+    <div className="fixed bottom-5 right-5 z-30 overflow-hidden cursor-pointer" onClick={handleClick}>
       <Image
         src="/icons/whatsapp/whatsapp.svg"
         alt="whatsapp"
