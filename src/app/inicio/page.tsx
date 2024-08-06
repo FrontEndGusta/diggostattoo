@@ -25,11 +25,11 @@ export default function Inicio({ refSession }: InicioProps) {
             style={{ height: "calc(100vh - 60px)" }}
             className="relative mx-auto flex flex-col items-start gap-4"
           >
-            <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+            <div className="absolute inset-0 z-20 w-full h-full overflow-hidden">
               <CarouselDApiDemo />
             </div>
-            <div className="relative z-10 flex-1 w-full flex-wrap md:flex-nowrap flex items-center justify-between">
-              <div className="flex justify-center w-full px-0 md:w-[50%] lg:px-40 items-center text-center md:text-left items-left gap-3 flex-col">
+            <div className="relative  flex-1 w-full flex-wrap md:flex-nowrap flex items-center justify-between">
+              <div className="flex justify-center z-30 w-full px-0 md:w-[50%] lg:px-40 items-center text-center md:text-left items-left gap-3 flex-col">
                 <FlipWordsDemo />
                 <div className="w-full">
                   <p className="text-[16px] md:text-2xl text-muted-foreground pb-4">
@@ -39,7 +39,7 @@ export default function Inicio({ refSession }: InicioProps) {
                 </div>
               </div>
             </div>
-            <div className="relative z-10 flex justify-center w-full mb-10">
+            <div className="relative z-30 flex justify-center w-full mb-10">
               <span onClick={scrollToEstilos} style={{ cursor: "pointer" }}>
                 <svg
                   className="animate-bounce"
